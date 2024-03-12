@@ -204,8 +204,8 @@ const CarouselPrevious = React.forwardRef<
     <button
       ref={ref}
       className={cn(
-        `absolute flex size-14 items-center justify-center rounded-full border border-slate-800 bg-slate-900/[0.8]
-        text-slate-300 shadow-lg shadow-white/5 transition-all hover:text-slate-100 hover:brightness-110`,
+        `absolute flex size-12 items-center justify-center rounded-full border border-slate-800 bg-slate-900/[0.8] text-slate-300
+        shadow-lg shadow-white/5 transition-all hover:text-slate-100 hover:brightness-110 lg:size-14`,
         orientation === 'horizontal'
           ? 'left-40 top-1/2 -translate-y-1/2'
           : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
@@ -215,7 +215,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft className="size-8" />
+      <ArrowLeft className="size-7 lg:size-8" />
       <span className="sr-only">Previous slide</span>
     </button>
   )
@@ -232,8 +232,8 @@ const CarouselNext = React.forwardRef<
     <button
       ref={ref}
       className={cn(
-        `absolute flex size-14 items-center justify-center rounded-full border border-slate-800 bg-slate-900/[0.8]
-        text-slate-300 shadow-lg shadow-white/5 transition-all hover:text-slate-100 hover:brightness-110`,
+        `absolute flex size-12 items-center justify-center rounded-full border border-slate-800 bg-slate-900/[0.8] text-slate-300
+        shadow-lg shadow-white/5 transition-all hover:text-slate-100 hover:brightness-110 lg:size-14`,
         orientation === 'horizontal'
           ? 'right-40 top-1/2 -translate-y-1/2'
           : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
@@ -243,7 +243,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight className="size-8" />
+      <ArrowRight className="size-7 lg:size-8" />
       <span className="sr-only">Next slide</span>
     </button>
   )

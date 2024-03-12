@@ -37,9 +37,9 @@ export const PortfolioGrid = ({ cards }: { cards: Card[] }) => {
               card.className,
               'relative cursor-pointer overflow-hidden',
               selected?.id === card.id
-                ? `absolute inset-0 z-50 m-auto flex aspect-square h-full max-h-[70vh] w-full max-w-[88%] cursor-default flex-col 
-                flex-wrap items-center justify-center rounded-t-lg border border-gray-700/15 shadow-lg shadow-foreground/30 
-                brightness-100 md:-mt-7 lg:max-h-[90vh] lg:max-w-[600px] lg:shadow-2xl lg:shadow-foreground/10 `
+                ? `absolute inset-0 z-50 m-auto flex aspect-square h-full max-h-[70vh] w-full max-w-[88%] cursor-default 
+                flex-col flex-wrap items-center justify-center rounded-t-lg border border-gray-500 shadow-lg 
+                shadow-foreground/30 brightness-100 md:-mt-7 lg:max-h-[90vh] lg:max-w-[600px] lg:shadow-2xl lg:shadow-foreground/10`
                 : lastSelected?.id === card.id
                   ? 'z-40 h-full w-full bg-white'
                   : 'h-full w-full bg-white',

@@ -16,8 +16,9 @@ const CvSheet = () => {
   return (
     <Sheet>
       <SheetTrigger
-        className="glow fixed bottom-7 left-4 z-[91] size-10 items-center justify-center rounded-full border border-slate-800 bg-background font-alt text-foreground/50 
-        transition-all duration-500 hover:border-foreground/70 hover:text-foreground/80 lg:bottom-auto lg:left-12 lg:top-7"
+        className="glow fixed bottom-7 left-4 z-[91] size-10 items-center justify-center rounded-full border border-slate-800 
+        bg-background/70 font-alt text-foreground/50 backdrop-blur-sm transition-all duration-500 hover:border-foreground/70 
+        hover:text-foreground/80 lg:bottom-auto lg:left-12 lg:top-7"
       >
         CV
       </SheetTrigger>

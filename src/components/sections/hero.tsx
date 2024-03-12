@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="z-20 lg:block">
-        <Underline className="max-w-[80%] -translate-y-12 opacity-70 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-0.5" />
+        <Underline className="max-w-[80%] -translate-y-16 opacity-70 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-0.5" />
       </div>
     </div>
   )

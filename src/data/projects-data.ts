@@ -3,7 +3,6 @@ import calculadoraCalorias from 'public/personal-projects/calculadora.png'
 import capputeeno from 'public/personal-projects/capputeeno.png'
 import coinsynch1 from 'public/personal-projects/coinsynch_1.png'
 import coinsynch2 from 'public/personal-projects/coinsynch_2.png'
-import geradorSenha from 'public/personal-projects/gerador_senha.png'
 import gerenciadorFinancas from 'public/personal-projects/gerenciador_financas.png'
 import poll1 from 'public/personal-projects/polls_1.png'
 import poll2 from 'public/personal-projects/polls_2.png'
@@ -17,18 +16,26 @@ export interface Project {
     image1: StaticImageData
     image2?: StaticImageData
   }
-  content: string
+  content: string[]
+  liveUrl: string
+  githubUrl: string
 }
 
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: 'Polls - Gerador de enquete',
+    title: 'Polls - Criador de enquetes',
     images: {
       image1: poll1,
       image2: poll2,
     },
-    content: 'gerador de enquete',
+    content: [
+      'Polls é um projeto FullStack que oferece uma plataforma para criar e compartilhar enquetes.',
+      'O BackEnd, foi desenvolvido utilizando as tecnologias Node.js, Fastify e Prisma, com Redis e WebHooks.',
+      'Já no FrontEnd, foi utilizado Next.js 14 e TypeScript, juntamente com shadcn/ui para uma interface de usuário moderna responsiva e intuitiva.',
+    ],
+    liveUrl: 'https://polls-web.vercel.app',
+    githubUrl: 'https://github.com/kellcrivelaroo/polls-web',
   },
   {
     id: 2,
@@ -37,7 +44,13 @@ export const projectsData: Project[] = [
       image1: coinsynch1,
       image2: coinsynch2,
     },
-    content: 'CoinSynch',
+    content: [
+      'CoinSynch é um projeto fictício desenvolvido como um desafio técnico para uma vaga de programador FrontEnd.',
+      'Ele consiste em uma Landing Page que fornece informações sobre criptomoedas e um painel administrativo para gerenciamento de sua carteira de criptomoedas e transações.',
+      'Entre as tecnologias utilizadas, destacam-se: Next.js 13, Tailwind CSS, Axios, Chart.js e Zod.',
+    ],
+    liveUrl: 'https://coinsynch-delta.vercel.app/',
+    githubUrl: 'https://github.com/kellcrivelaroo/coinsynch',
   },
   {
     id: 3,
@@ -46,7 +59,13 @@ export const projectsData: Project[] = [
       image1: portfolio1,
       image2: portfolio2,
     },
-    content: 'portfólio',
+    content: [
+      'Versão 1.0 do meu portfólio de projetos.',
+      'Optei pelo desenvolvimento de nova versão, mais moderna, profissional, manutenível, e que reflete de forma mais precisa minhas habilidades como desenvolvedor FullStack.',
+      'Tecnologias utilizadas: Next.js, Typescript e Tailwind CSS',
+    ],
+    liveUrl: 'https://portfolio-delta-three-900.vercel.app/',
+    githubUrl: 'https://github.com/kellcrivelaroo/portfolio',
   },
   {
     id: 4,
@@ -54,7 +73,12 @@ export const projectsData: Project[] = [
     images: {
       image1: gerenciadorFinancas,
     },
-    content: 'gerenciador de finanças',
+    content: [
+      'Aplicativo para gerenciamento de finanças, que permite aos usuários cadastrem suas despesas e receitas, além de fornecer recursos para análise dos dados através de gráficos.',
+      'Tecnologias utilizadas: Next.js, Typescript, Tailwind CSS, Shadcn/UI, Zod e Recharts',
+    ],
+    liveUrl: 'https://gerenciador-financas-six.vercel.app/',
+    githubUrl: 'https://github.com/kellcrivelaroo/gerenciador-financas',
   },
   {
     id: 5,
@@ -62,7 +86,13 @@ export const projectsData: Project[] = [
     images: {
       image1: capputeeno,
     },
-    content: 'capputeeno',
+    content: [
+      'Capputeeno é a minha solução para um desafio técnico aberto (FrontEnd Challenge)',
+      'Trata-se de uma loja virtual fictícia que incorpora uma ampla gama de funcionalidades encontradas em e-commerces da atualidade.',
+    ],
+    liveUrl: 'https://capputeeno-frontend-challenge.vercel.app/',
+    githubUrl:
+      'https://github.com/kellcrivelaroo/capputeeno-frontend-challenge',
   },
   {
     id: 6,
@@ -70,14 +100,11 @@ export const projectsData: Project[] = [
     images: {
       image1: calculadoraCalorias,
     },
-    content: 'gerador senha',
-  },
-  {
-    id: 7,
-    title: 'Gerador de Senha',
-    images: {
-      image1: geradorSenha,
-    },
-    content: 'gerador senha',
+    content: [
+      'Aplicação web que permite aos usuários calcular sua Taxa Metabólica Basal (TMB) e obter uma sugestão de calorias diárias com base em seu peso, altura, idade, sexo, nível de atividade e objetivo.',
+      'O projeto foi criada utilizando as tecnologias React, TypeScript e Lottie para adicionar animações aos ícones.',
+    ],
+    liveUrl: 'https://calculadora-calorias-iota.vercel.app/',
+    githubUrl: 'https://github.com/kellcrivelaroo/calculadora-calorias',
   },
 ]

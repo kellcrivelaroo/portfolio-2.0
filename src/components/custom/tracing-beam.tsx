@@ -55,7 +55,7 @@ export const TracingBeam = ({
         className,
       )}
     >
-      <div className="pointer-events-none absolute -left-2 top-24 z-50 lg:left-[33px] lg:top-28">
+      <div className="pointer-events-none absolute -left-4 top-24 z-50 lg:left-[33px] lg:top-28">
         <motion.div
           transition={{
             duration: 0.2,

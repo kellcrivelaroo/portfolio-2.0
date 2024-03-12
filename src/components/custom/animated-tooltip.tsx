@@ -65,8 +65,8 @@ export const AnimatedTooltip = ({
                   rotate: rotate,
                   whiteSpace: 'nowrap',
                 }}
-                className="absolute -top-16 left-0 z-50 flex flex-col items-center justify-center 
-                rounded-md border border-foreground/10 bg-background px-4 py-2 text-xs shadow-xl"
+                className="absolute -top-16 left-0 z-50 hidden flex-col items-center justify-center 
+                rounded-md border border-foreground/10 bg-background px-4 py-2 text-xs shadow-xl lg:flex"
               >
                 <div
                   className="absolute inset-x-[20%] -bottom-px z-30 h-px w-[20%] bg-gradient-to-r from-transparent 

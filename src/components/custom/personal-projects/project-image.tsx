@@ -8,7 +8,7 @@ interface ProjectImageProps {
 const ProjectImage = ({ image1, image2 }: ProjectImageProps) => {
   if (!image2)
     return (
-      <div className="flex h-[440px] w-[510px] items-center justify-center">
+      <div className="flex h-[55vw] items-center justify-center p-6 lg:h-[440px] lg:w-[510px]">
         <Image
           src={image1}
           alt=""
@@ -20,20 +20,20 @@ const ProjectImage = ({ image1, image2 }: ProjectImageProps) => {
     )
 
   return (
-    <div className="relative h-[440px] w-[510px]">
+    <div className="relative h-[55vw] w-full p-4 lg:h-[440px] lg:w-[510px]">
       <Image
         src={image2}
         alt=""
         height={280}
         quality={98}
-        className="absolute right-0 top-0 rounded-sm border border-foreground/5 shadow-lg shadow-foreground/5"
+        className="absolute right-0 top-0 max-w-[70%] rounded-sm border border-foreground/5 shadow-lg shadow-foreground/5"
       />
       <Image
         src={image1}
         alt=""
         height={280}
         quality={98}
-        className="absolute bottom-0 left-0 rounded-sm border border-foreground/5 shadow-lg shadow-foreground/5"
+        className="absolute bottom-0 left-0 max-w-[70%] rounded-sm border border-foreground/5 shadow-lg shadow-foreground/5"
       />
     </div>
   )

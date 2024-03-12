@@ -11,7 +11,7 @@ const Portfolio = () => {
     >
       <Heading className="text-4xl">Portfólio</Heading>
 
-      <div className="mx-auto h-[90vh] w-full pl-6 pr-5 lg:px-20">
+      <div className="mx-auto h-[90vh] w-full px-4 lg:px-20">
         <PortfolioGrid cards={portfolioCards} />
       </div>
     </div>

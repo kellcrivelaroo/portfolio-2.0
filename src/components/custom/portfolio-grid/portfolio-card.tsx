@@ -3,6 +3,7 @@ import { ExternalLink, RotateCcw, X } from 'lucide-react'
 
 import { Card } from '@/data/portfolio-data'
 
+import Link from '../link'
 import Underline from '../underline'
 
 interface PortfolioCardProps {
@@ -72,17 +73,10 @@ const PortfolioCard = ({ card, close }: PortfolioCardProps) => {
         }}
         className="relative z-[70] mx-auto pb-6"
       >
-        <a
-          href={card?.url}
-          target="_blank"
-          className="relative flex w-fit items-center gap-1 rounded-full border border-foreground/30 bg-slate-900/95 
-          px-2 py-1 text-xs font-normal text-slate-200 brightness-110 transition-all duration-500 hover:border-slate-700 
-          hover:brightness-150 lg:gap-3 lg:px-7 lg:py-1.5 lg:text-xl"
-        >
+        <Link href={card?.url || ''}>
           <ExternalLink className="size-3 lg:size-5" />
           {card?.url}
-          <Underline className="translate-y-px" />
-        </a>
+        </Link>
       </motion.div>
     </div>
   )
