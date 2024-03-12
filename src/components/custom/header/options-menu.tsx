@@ -7,7 +7,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '../ui/dropdown-menu'
+} from '../../ui/dropdown-menu'
 
 type ThemeInfo = {
   title: string
@@ -39,8 +39,8 @@ const OptionsMenu = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        className="glow z-30 flex size-10 items-center justify-center rounded-full border border-foreground/30 bg-background font-alt
-  text-foreground/50 shadow-lg transition-all duration-500 hover:scale-105 hover:border-foreground/70 hover:text-foreground/80"
+        className="glow fixed bottom-7 right-4 z-[90] flex size-10 items-center justify-center rounded-full border border-slate-800 bg-background font-alt text-foreground/50 transition-all duration-500 
+        hover:border-foreground/70 hover:text-foreground/80 lg:bottom-auto lg:left-[calc(100vw-100px)] lg:right-auto lg:top-7"
       >
         <MoreHorizontal className="size-5" />
       </DropdownMenuTrigger>

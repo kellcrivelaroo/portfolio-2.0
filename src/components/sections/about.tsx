@@ -1,8 +1,7 @@
 import Image from 'next/image'
+import avatar from 'public/kell.png'
 
-import avatar from '@/../public/kell.png'
-
-import Underline from '../custom/underline'
+import Heading from '../custom/heading'
 
 const resizeConstant = 2.2
 
@@ -14,26 +13,19 @@ const About = () => {
         [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]"
       />
 
-      <div className="container z-20 mx-auto flex flex-col items-center pb-20 pt-28">
-        <div className="mb-5 flex items-center justify-center gap-10">
-          <div className="relative px-8">
-            <h2 className="font-alt text-6xl font-bold leading-normal tracking-wider">
-              Sobre
-            </h2>
-            <Underline />
-          </div>
-          <div className="overflow-hidden rounded-full ">
+      <div className="container relative z-20 mx-auto flex flex-col items-center pt-28 lg:gap-5 lg:py-28">
+        <Heading className="text-4xl">Sobre</Heading>
+        <div className="static mx-auto space-y-3 px-4 text-justify indent-10 text-base lg:relative lg:max-w-[80%] xl:text-2xl">
+          <div className="absolute right-1/2 top-0 translate-x-1/2 overflow-hidden rounded-full lg:right-3 lg:translate-x-0">
             <Image
               src={avatar}
-              alt=""
+              alt="Foto de perfil - Kell Crivelaro"
               width={avatar.width / resizeConstant}
               height={avatar.height / resizeConstant}
-              className="scale-[1.02]"
+              className="max-w-[112px] scale-[1.02] lg:max-w-full"
             />
           </div>
-        </div>
-        <div className="space-y-2">
-          <p className="mx-auto max-w-[75%] indent-12 text-xl">
+          <p className="lg:pr-52">
             Meu nome é Kellington Crivelaro, tenho 31 anos. Sou formado como
             técnico de informática pelo CTI (Colégio Técnico Industrial - UNESP)
             desde 2009. Logo na sequencia, me formei como engenheiro civil, no
@@ -41,7 +33,7 @@ const About = () => {
             transição para a área de programação, resultando na criação da Flame
             Tecnologia, no ano de 2022.
           </p>
-          <p className="mx-auto max-w-[75%] indent-12 text-xl">
+          <p>
             Com habilidades em programação, desenvolvimento web e gerenciamento
             de projetos, estou comprometido em fornecer soluções eficazes e sob
             medida para os desafios dos meus clientes. Sou motivado pela busca
@@ -49,7 +41,7 @@ const About = () => {
             para contribuir em projetos desafiadores, trazendo minha experiência
             técnica e paixão pela tecnologia.
           </p>
-          <p className="mx-auto max-w-[75%] indent-12 text-xl">
+          <p>
             Se você está procurando por um profissional versátil, orientado para
             resultados e com um histórico comprovado de sucesso, estou pronto
             para fazer a diferença em sua próxima iniciativa.

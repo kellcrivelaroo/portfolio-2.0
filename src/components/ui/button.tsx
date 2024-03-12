@@ -15,7 +15,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <Comp
         className="group relative inline-block w-fit cursor-pointer rounded-full bg-primary/10 px-0.5 py-px font-alt
       text-lg font-medium tracking-wider text-foreground no-underline shadow-xl shadow-foreground/5 transition-colors
-      duration-500 hover:bg-primary/25 hover:dark:bg-primary/15"
+      duration-500 hover:bg-primary/25 disabled:cursor-not-allowed disabled:opacity-70 hover:dark:bg-primary/15"
         ref={ref}
         {...props}
       >
@@ -28,8 +28,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         </span>
         <div
           className={cn(
-            `relative z-10 flex items-center space-x-2 rounded-full bg-slate-200/80 px-7 py-1 ring-1 dark:bg-slate-900/80
-          dark:ring-foreground/10`,
+            `relative z-10 flex items-center space-x-2 rounded-full bg-slate-200/80 px-7 py-1 ring-1 dark:bg-slate-950/70
+          dark:ring-slate-950/25`,
             className,
           )}
         >

@@ -1,4 +1,4 @@
-import { Button } from '../ui/button'
+import { Button } from '../../ui/button'
 import {
   Sheet,
   SheetClose,
@@ -10,19 +10,18 @@ import {
   SheetPortal,
   SheetTitle,
   SheetTrigger,
-} from '../ui/sheet'
+} from '../../ui/sheet'
 
 const CvSheet = () => {
   return (
     <Sheet>
       <SheetTrigger
-        className="glow flex size-10 items-center justify-center rounded-full border border-foreground/30 
-        bg-background font-alt text-foreground/50  shadow-lg transition-all duration-500 hover:scale-105 
-        hover:border-foreground/70 hover:text-foreground/80"
+        className="glow fixed bottom-7 left-4 z-[91] size-10 items-center justify-center rounded-full border border-slate-800 bg-background font-alt text-foreground/50 
+        transition-all duration-500 hover:border-foreground/70 hover:text-foreground/80 lg:bottom-auto lg:left-12 lg:top-7"
       >
         CV
       </SheetTrigger>
-      <SheetContent side="left" className="z-[99] min-w-[75%]">
+      <SheetContent side="left" className="z-[99] min-w-full lg:min-w-[75%]">
         <SheetHeader>
           <SheetTitle>CV</SheetTitle>
           <SheetDescription>this is my cv</SheetDescription>

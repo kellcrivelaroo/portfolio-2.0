@@ -2,6 +2,7 @@ import './globals.css'
 
 import type { Metadata } from 'next'
 import { Bai_Jamjuree as Alt, Montserrat as Sans } from 'next/font/google'
+import { Toaster } from 'sonner'
 
 import { ThemeProvider } from '@/components/providers/theme-provider'
 import Header from '@/components/sections/header'
@@ -28,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          'relative overflow-x-hidden font-sans font-medium antialiased',
+          'relative w-screen overflow-x-hidden font-sans antialiased',
           fontSans.variable,
           fontAlt.variable,
         )}
@@ -41,6 +42,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
+          <Toaster richColors />
         </ThemeProvider>
       </body>
     </html>
