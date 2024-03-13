@@ -1,3 +1,9 @@
+import Image from 'next/image'
+import javascript from 'public/stack/javascript.svg'
+import next from 'public/stack/next-js.svg'
+import node from 'public/stack/node-js.svg'
+import react from 'public/stack/react.svg'
+
 import { AnimatedTooltip } from '../custom/animated-tooltip'
 import MailButton from '../custom/mail-button'
 import { Spotlight } from '../custom/spotlight'
@@ -7,7 +13,64 @@ const heroButton = [
   {
     id: 1,
     title: 'Copiar para a área de transferência',
-    link: <MailButton />,
+    element: <MailButton />,
+  },
+]
+
+const stack = [
+  {
+    id: 1,
+    title: 'JavaScript',
+    element: (
+      <Image
+        src={javascript}
+        alt="JavaScript logo"
+        width={28}
+        height={28}
+        className="size-6 lg:size-7"
+      />
+    ),
+  },
+  {
+    id: 2,
+    title: 'React.js',
+    element: (
+      <Image
+        src={react}
+        alt="React.js logo"
+        width={28}
+        height={28}
+        className="size-6 lg:size-7"
+      />
+    ),
+  },
+  {
+    id: 3,
+    title: 'Next.js',
+    element: (
+      <div className="rounded-md dark:bg-slate-300 dark:p-px">
+        <Image
+          src={next}
+          alt="Next.js logo"
+          width={28}
+          height={28}
+          className="size-6 lg:size-7"
+        />
+      </div>
+    ),
+  },
+  {
+    id: 4,
+    title: 'Node.js',
+    element: (
+      <Image
+        src={node}
+        alt="Node.js logo"
+        width={28}
+        height={28}
+        className="size-6 lg:size-7"
+      />
+    ),
   },
 ]
 
@@ -24,10 +87,10 @@ const Hero = () => {
         [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]"
       />
       <div className="container relative z-20 flex flex-col items-center justify-center">
-        <h1 className="mb-8 w-full select-none pl-0.5 text-center text-4xl font-bold leading-snug text-transparent sm:text-[5.5rem] lg:leading-none">
+        <h1 className="mb-6 w-full select-none pl-0.5 text-center text-4xl font-bold leading-snug text-transparent sm:text-[5.5rem] lg:mb-8 lg:leading-none">
           <span
             className="relative bg-gradient-to-b from-slate-600 to-foreground bg-clip-text dark:from-foreground
-          dark:to-slate-300 lg:-ml-52"
+          dark:to-slate-300 lg:-ml-40"
           >
             Desenvolvedor
             <Underline className="-bottom-2 lg:bottom-0" />
@@ -35,19 +98,40 @@ const Hero = () => {
           <br />
           <span
             className="relative h-full w-fit bg-gradient-to-b from-slate-600 to-foreground bg-clip-text px-10 
-            dark:from-foreground dark:to-slate-300 lg:-mr-[22.2rem] lg:w-full"
+            dark:from-foreground dark:to-slate-300 lg:-mr-[25rem] lg:w-full"
           >
             Full Stack
             <Underline className="-bottom-2 left-1/2 max-w-[60%] -translate-x-1/2 lg:bottom-0 lg:max-w-full" />
           </span>
         </h1>
-        <p className="mb-10 max-w-[90%] text-center text-xl lg:max-w-[60%] lg:text-2xl">
-          Desenvolvedor front-end, apaixonado por Pixel Perfect e por criar
-          experiências interativas. Sócio diretor da Flame Tecnologia,
-          freelancer, e sempre em busca de novos desafios no mundo do
+
+        <p className="mb-6 max-w-[90%] text-center text-xl lg:mb-10 lg:max-w-[60%] lg:text-2xl ">
+          Apaixonado por Pixel Perfect, soluções modernas e por criar
+          experiências interativas.
+          <br />
+          Sócio diretor da{' '}
+          <a
+            href="https://flametecnologia.com.br"
+            target="_blank"
+            className="underline underline-offset-4 transition-colors duration-500 hover:text-sky-500"
+          >
+            Flame Tecnologia
+          </a>
+          , FreeLancer, e sempre em busca de novos desafios no mundo do
           desenvolvimento web.
         </p>
-        <div className="relative flex w-fit flex-row items-center justify-center">
+
+        <div className="mb-8 flex items-end gap-5 lg:mb-14">
+          <span className="leading-none underline underline-offset-4 lg:text-lg">
+            Stack:
+          </span>
+          <AnimatedTooltip items={stack} />
+        </div>
+
+        <div className="relative flex w-fit flex-col items-center justify-center">
+          <span className="mb-1 text-sm text-muted-foreground lg:hidden">
+            Clique para copiar:
+          </span>
           <AnimatedTooltip items={heroButton} />
         </div>
       </div>

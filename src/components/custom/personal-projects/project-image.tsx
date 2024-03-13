@@ -26,14 +26,14 @@ const ProjectImage = ({ image1, image2 }: ProjectImageProps) => {
         alt=""
         height={280}
         quality={98}
-        className="absolute right-0 top-0 max-w-[70%] rounded-sm border border-foreground/5 shadow-lg shadow-foreground/5"
+        className="absolute right-0 top-0 max-w-[80%] rounded-sm border border-foreground/5 shadow-lg shadow-foreground/5"
       />
       <Image
         src={image1}
         alt=""
         height={280}
         quality={98}
-        className="absolute bottom-0 left-0 max-w-[70%] rounded-sm border border-foreground/5 shadow-lg shadow-foreground/5"
+        className="absolute bottom-0 left-0 max-w-[80%] rounded-sm border border-foreground/5 shadow-lg shadow-foreground/5"
       />
     </div>
   )

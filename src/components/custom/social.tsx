@@ -26,7 +26,7 @@ export const social = [
     id: 1,
     title: 'Github',
     subtitle: '/kellcrivelaroo',
-    link: (
+    element: (
       <Link href="https://github.com/kellcrivelaroo">
         <Github className="size-7 transition-colors duration-300 group-hover:text-sky-500" />
       </Link>
@@ -36,7 +36,7 @@ export const social = [
     id: 2,
     title: 'LinkedIn',
     subtitle: '/in/kellcrivelaro',
-    link: (
+    element: (
       <Link href="https://www.linkedin.com/in/kellcrivelaro">
         <Linkedin className="size-7 transition-colors duration-300 group-hover:text-sky-500" />
       </Link>
@@ -46,7 +46,7 @@ export const social = [
     id: 3,
     title: 'Instagram',
     subtitle: '/kellcrivelaro',
-    link: (
+    element: (
       <Link href="https://instagram.com/kellcrivelaro">
         <Instagram className="size-7 transition-colors duration-300 group-hover:text-sky-500" />
       </Link>
@@ -57,7 +57,7 @@ export const social = [
     title: 'Flame Tecnologia',
     subtitle: 'flametecnologia.com.br',
     href: 'https://flametecnologia.com.br',
-    link: (
+    element: (
       <Link href="https://flametecnologia.com.br">
         <Image
           src={flame}

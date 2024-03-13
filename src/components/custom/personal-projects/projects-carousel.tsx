@@ -23,7 +23,7 @@ const ProjectsCarousel = () => {
         {projectsData.map((project) => (
           <CarouselItem
             key={project.id}
-            className="container pl-10 pr-6 lg:px-20"
+            className="container pl-12 pr-8 lg:px-20"
           >
             <ProjectCard project={project} />
           </CarouselItem>

@@ -19,7 +19,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       duration={7000}
       borderRadius="1rem"
     >
-      <div className="flex h-full w-full flex-col items-center justify-center gap-4 p-4 lg:flex-row lg:gap-7 lg:px-7 lg:py-10">
+      <div className="flex h-full w-full flex-col items-center justify-center gap-4 px-3 py-4 lg:flex-row lg:gap-7 lg:px-7 lg:py-10">
         <div className="w-full lg:order-2 lg:w-fit">
           <ProjectImage {...project.images} />
         </div>

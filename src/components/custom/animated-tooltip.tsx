@@ -15,7 +15,7 @@ export const AnimatedTooltip = ({
     id: number
     title: string
     subtitle?: string
-    link: JSX.Element
+    element: JSX.Element
   }[]
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
@@ -65,7 +65,7 @@ export const AnimatedTooltip = ({
                   rotate: rotate,
                   whiteSpace: 'nowrap',
                 }}
-                className="absolute -top-16 left-0 z-50 hidden flex-col items-center justify-center 
+                className="absolute -left-10 -top-16 z-50 hidden flex-col items-center justify-center 
                 rounded-md border border-foreground/10 bg-background px-4 py-2 text-xs shadow-xl lg:flex"
               >
                 <div
@@ -85,7 +85,7 @@ export const AnimatedTooltip = ({
               </motion.div>
             )}
           </AnimatePresence>
-          {item.link}
+          {item.element}
         </div>
       ))}
     </>
