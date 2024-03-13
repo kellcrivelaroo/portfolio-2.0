@@ -1,25 +1,19 @@
 'use client'
 import autoAnimate from '@formkit/auto-animate'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { animate } from 'framer-motion'
-import { Github, Instagram, Linkedin } from 'lucide-react'
-import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import { Loader, Loader2 } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 import { z } from 'zod'
 
-import { cn } from '@/lib/utils'
-
-import { Button } from '../../ui/button'
 import { MovingBorderCard } from '../moving-border-card'
-import { social } from '../social'
 import Underline from '../underline'
 import ContactSocial from './contact-social'
 import { Input } from './input'
-import { Label } from './label'
 import { TextArea } from './text-area'
 
-const formSchema = z.object({
+const contactFormSchema = z.object({
   subject: z.string().min(1, { message: 'Sobre qual assunto deseja tratar?' }),
   name: z.string().min(1, { message: 'Digite seu nome, por favor.' }),
   email: z
@@ -29,26 +23,47 @@ const formSchema = z.object({
   message: z.string().min(1, { message: 'Digite uma mensagem, por favor.' }),
 })
 
-type FormSchema = z.infer<typeof formSchema>
+export type ContactForm = z.infer<typeof contactFormSchema>
 
 const ContactForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormSchema>({
-    resolver: zodResolver(formSchema),
+    reset,
+  } = useForm<ContactForm>({
+    resolver: zodResolver(contactFormSchema),
   })
+  const [sending, setSending] = useState(false)
+
+  const onSubmit = async (data: ContactForm) => {
+    try {
+      setSending(true)
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (res.ok) {
+        reset()
+        toast.success('Obrigado pelo interesse! Entrarei em contato em breve!')
+      } else {
+        throw new Error('Mail delivery error')
+      }
+    } catch {
+      toast.error('Ocorreu um erro. Por favor entre em contato via LinkedIn.')
+    } finally {
+      setSending(false)
+    }
+  }
 
   const animate = useRef(null)
-
   useEffect(() => {
     animate.current && autoAnimate(animate.current)
   }, [animate])
-
-  const submit = (data: FormSchema) => {
-    console.log(data)
-  }
 
   return (
     <MovingBorderCard
@@ -60,7 +75,7 @@ const ContactForm = () => {
       <form
         className="mx-4 my-6 flex w-[540px] max-w-[75vw] flex-col gap-3 lg:mx-14 lg:my-8 lg:mb-10 lg:gap-5"
         ref={animate}
-        onSubmit={handleSubmit(submit)}
+        onSubmit={handleSubmit(onSubmit)}
       >
         <span className="mb-1 text-center text-base leading-tight lg:text-lg">
           Sinta-se a vontade para enviar uma mensagem!
@@ -98,9 +113,13 @@ const ContactForm = () => {
           <button
             className="group relative flex w-fit items-center justify-center gap-3 rounded-full border border-slate-800 
             bg-slate-950/80 px-8 py-1 font-alt text-lg font-normal tracking-wider text-slate-200 transition-all duration-500 hover:border-slate-700/50 
-            hover:text-foreground hover:brightness-[1.35] lg:px-14"
+            hover:text-foreground hover:brightness-[1.35] disabled:opacity-50 lg:px-14 "
             type="submit"
+            disabled={sending}
           >
+            {sending && (
+              <Loader2 className="absolute left-5 top-2 size-5  animate-spin" />
+            )}
             Enviar
             <Underline className="translate-y-px opacity-30 transition-all duration-500 group-hover:opacity-60" />
           </button>

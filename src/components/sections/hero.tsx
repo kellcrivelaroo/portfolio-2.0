@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import astro from 'public/stack/astro.svg'
 import javascript from 'public/stack/javascript.svg'
 import next from 'public/stack/next-js.svg'
 import node from 'public/stack/node-js.svg'
@@ -48,7 +49,7 @@ const stack = [
     id: 3,
     title: 'Next.js',
     element: (
-      <div className="rounded-md dark:bg-slate-300 dark:p-px">
+      <div className="rounded-md dark:bg-slate-200 dark:p-px">
         <Image
           src={next}
           alt="Next.js logo"
@@ -72,11 +73,27 @@ const stack = [
       />
     ),
   },
+  {
+    id: 5,
+    title: 'Astro',
+    element: (
+      <div className="rounded-md dark:bg-slate-200 dark:p-px">
+        <Image
+          src={astro}
+          alt="Astro logo"
+          width={28}
+          height={28}
+          className="size-6 lg:size-7"
+        />
+      </div>
+    ),
+  },
 ]
 
 const Hero = () => {
   return (
     <div
+      id="home"
       className="relative flex min-h-screen w-full items-center justify-center bg-white 
       bg-grid-small-black/[0.25] dark:bg-background dark:bg-grid-small-white/[0.25]"
     >
@@ -136,7 +153,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="z-20 lg:block">
-        <Underline className="max-w-[80%] -translate-y-16 opacity-70 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-0.5" />
+        <Underline className="max-w-[80%] -translate-y-0.5 opacity-70 lg:left-1/2 lg:-translate-x-1/2" />
       </div>
     </div>
   )

@@ -1,16 +1,25 @@
-import Link from 'next/link'
+'use client'
+import { Link } from 'react-scroll'
 
 interface MenuButtonProps {
   title: string
   href: string
+  toggle?: VoidFunction
 }
 
-const MenuButton = ({ title, href }: MenuButtonProps) => {
+const MenuButton = ({ title, href, toggle }: MenuButtonProps) => {
+  const handleClick = () => {
+    if (toggle) toggle()
+  }
+
   return (
     <li>
       <Link
-        href={href}
-        className="relative p-0.5 before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-center
+        to={href}
+        smooth
+        duration={500}
+        onClick={handleClick}
+        className="relative cursor-pointer p-0.5 before:absolute before:bottom-0 before:left-0 before:h-px before:w-full before:origin-center
         before:scale-x-0 before:bg-sky-500 before:transition-all before:duration-500 hover:before:scale-x-100"
       >
         {title}

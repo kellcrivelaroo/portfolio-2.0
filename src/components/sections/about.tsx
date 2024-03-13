@@ -7,16 +7,20 @@ const resizeConstant = 2.2
 
 const About = () => {
   return (
-    <div className="relative flex w-full items-center justify-center bg-dot-black/[0.25] dark:bg-dot-white/[0.15]">
+    <div
+      id="about"
+      className="relative flex w-full items-center justify-center pt-28 bg-dot-black/[0.25] dark:bg-dot-white/[0.15]
+      lg:pt-0"
+    >
       <div
         className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background 
         [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]"
       />
 
-      <div className="container relative z-20 mx-auto flex flex-col items-center pt-28 lg:gap-5 lg:py-28">
-        <Heading className="text-4xl">Sobre</Heading>
+      <div className="container relative z-20 mx-auto flex flex-col items-center pt-20 lg:gap-5 lg:py-28">
+        <Heading>Sobre</Heading>
         <div className="static mx-auto space-y-3 px-4 text-justify indent-10 text-base lg:relative lg:max-w-[80%] xl:text-2xl">
-          <div className="absolute right-1/2 top-0 translate-x-1/2 overflow-hidden rounded-full lg:right-3 lg:translate-x-0">
+          <div className="absolute -top-10 right-1/2 translate-x-1/2 overflow-hidden rounded-full lg:right-3 lg:top-0 lg:translate-x-0">
             <Image
               src={avatar}
               alt="Foto de perfil - Kell Crivelaro"
@@ -26,9 +30,9 @@ const About = () => {
             />
           </div>
           <p className="lg:pr-52">
-            Meu nome é Kellington Crivelaro, tenho 31 anos. Sou formado como
-            técnico de informática pelo CTI (Colégio Técnico Industrial - UNESP)
-            desde 2009. Logo na sequencia, me formei como engenheiro civil, no
+            Sou Kellington Crivelaro, tenho 31 anos. Sou formado como técnico de
+            informática pelo CTI (Colégio Técnico Industrial - UNESP) desde
+            2009. Logo na sequencia, me formei como engenheiro civil, no
             entanto, minha paixão pela tecnologia me levou a buscar uma nova
             transição para a área de programação, resultando na criação da Flame
             Tecnologia, no ano de 2022.

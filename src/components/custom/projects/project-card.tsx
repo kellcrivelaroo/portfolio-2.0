@@ -1,6 +1,7 @@
 import { Github, Monitor } from 'lucide-react'
 
 import { Project } from '@/data/projects-data'
+import { cn } from '@/lib/utils'
 
 import Link from '../link'
 import { MovingBorderCard } from '../moving-border-card'
@@ -9,12 +10,18 @@ import ProjectImage from './project-image'
 
 interface ProjectCardProps {
   project: Project
+  index: number
+  current: number
 }
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, index, current }: ProjectCardProps) => {
+  const currentSlide = index === current
   return (
     <MovingBorderCard
-      containerClassName="w-full h-full items-center justify-center shadow-lg container"
+      containerClassName={cn(
+        'w-full h-full items-center justify-center shadow-lg container transition-all duration-500',
+        !currentSlide ? 'scale-[0.85] brightness-[0.75]' : '',
+      )}
       borderClassName="w-[480px] h-[180px]"
       duration={7000}
       borderRadius="1rem"

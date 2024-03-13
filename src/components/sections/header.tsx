@@ -1,11 +1,9 @@
-import { ArrowRight } from 'lucide-react'
-
+import ContactButton from '../custom/header/contact-button'
 import CvDrawer from '../custom/header/cv-drawer'
 import Logo from '../custom/header/logo'
 import MenuMobile from '../custom/header/menu-mobile'
 import NavLinks from '../custom/header/nav-links'
 import OptionsMenu from '../custom/header/options-menu'
-import { Button } from '../ui/button'
 
 const Header = () => {
   return (
@@ -24,9 +22,7 @@ const Header = () => {
           </div>
 
           <div className="ml-auto hidden lg:flex">
-            <Button className="gap-2 pr-4">
-              Contato <ArrowRight className="size-5" />
-            </Button>
+            <ContactButton />
           </div>
         </div>
       </header>

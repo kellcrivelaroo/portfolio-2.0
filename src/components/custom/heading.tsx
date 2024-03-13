@@ -14,7 +14,7 @@ const Heading = ({ className, children }: HeadingProps) => {
     <div className="relative px-8">
       <h2
         className={cn(
-          'font-alt text-3xl font-bold leading-normal tracking-wider lg:text-6xl',
+          'font-alt text-4xl font-bold leading-normal tracking-wider lg:text-6xl',
           className,
         )}
       >

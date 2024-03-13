@@ -3,33 +3,38 @@ import MenuButton from './menu-button'
 const navLinks = [
   {
     title: 'Início',
-    href: '#home',
+    href: 'home',
   },
   {
     title: 'Sobre',
-    href: '#about',
+    href: 'about',
   },
   {
-    title: 'Projetos Pessoais',
-    href: '#personal',
+    title: 'Projetos',
+    href: 'projects',
   },
   {
     title: 'Porfólio',
-    href: '#portfolio',
+    href: 'portfolio',
   },
   {
     title: 'Contato',
-    href: '#contact',
+    href: 'contact',
   },
 ]
 
-const NavLinks = ({ full = false }: { full?: boolean }) => {
+interface NavLinksProps {
+  toggle?: VoidFunction
+  full?: boolean
+}
+
+const NavLinks = ({ toggle, full = false }: NavLinksProps) => {
   const links = full ? navLinks : navLinks.slice(0, 4)
   return (
     <nav>
       <ul className="flex flex-col items-center justify-center gap-6 text-lg lg:flex-row lg:gap-12">
         {links.map((link) => (
-          <MenuButton key={link.title} {...link} />
+          <MenuButton key={link.title} toggle={toggle} {...link} />
         ))}
       </ul>
     </nav>

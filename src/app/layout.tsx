@@ -42,7 +42,12 @@ export default function RootLayout({
         >
           <Header />
           {children}
-          <Toaster richColors />
+          <Toaster
+            richColors
+            toastOptions={{
+              style: { fontSize: '1rem' },
+            }}
+          />
         </ThemeProvider>
       </body>
     </html>
