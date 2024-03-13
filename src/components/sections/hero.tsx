@@ -13,7 +13,14 @@ import Underline from '../custom/underline'
 const heroButton = [
   {
     id: 1,
-    title: 'Copiar para a área de transferência',
+    title: (
+      <div>
+        <span className="hidden lg:block">
+          Copiar para a área de transferência
+        </span>
+        <span className="lg:hidden">E-mail copiado!</span>
+      </div>
+    ),
     element: <MailButton />,
   },
 ]
@@ -92,7 +99,7 @@ const stack = [
 
 const Hero = () => {
   return (
-    <div
+    <section
       id="home"
       className="relative flex min-h-screen w-full items-center justify-center bg-white 
       bg-grid-small-black/[0.25] dark:bg-background dark:bg-grid-small-white/[0.25]"
@@ -155,7 +162,7 @@ const Hero = () => {
       <div className="z-20 lg:block">
         <Underline className="max-w-[80%] -translate-y-0.5 opacity-70 lg:left-1/2 lg:-translate-x-1/2" />
       </div>
-    </div>
+    </section>
   )
 }
 

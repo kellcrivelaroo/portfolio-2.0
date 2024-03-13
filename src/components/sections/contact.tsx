@@ -3,7 +3,7 @@ import Heading from '../custom/heading'
 
 const Contact = () => {
   return (
-    <div
+    <section
       id="contact"
       className="relative bg-gradient-to-b from-slate-800 to-background to-70% pt-4 lg:pt-0"
     >
@@ -24,7 +24,7 @@ const Contact = () => {
           <ContactForm />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

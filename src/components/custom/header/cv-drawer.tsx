@@ -1,42 +1,62 @@
-import { Button } from '../../ui/button'
+import { Download } from 'lucide-react'
+import { ReactNode } from 'react'
+
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
-  SheetFooter,
   SheetHeader,
-  SheetOverlay,
-  SheetPortal,
   SheetTitle,
   SheetTrigger,
 } from '../../ui/sheet'
+import Link from '../link'
+import PdfViewer from './pdf-viewer'
 
-const CvSheet = () => {
+interface CvSheetProps {
+  children?: ReactNode
+}
+
+const CvSheet = ({ children }: CvSheetProps) => {
   return (
     <Sheet>
-      <SheetTrigger
-        className="glow fixed bottom-7 left-4 z-[91] size-10 items-center justify-center rounded-full border border-slate-800 
-        bg-background/70 font-alt text-foreground/50 backdrop-blur-sm transition-all duration-500 hover:border-foreground/70 
-        hover:text-foreground/80 lg:bottom-auto lg:left-12 lg:top-7"
+      {children ? (
+        <SheetTrigger asChild>{children}</SheetTrigger>
+      ) : (
+        <SheetTrigger
+          className="glow fixed bottom-7 left-4 z-[91] size-12 items-center justify-center rounded-full border border-slate-800 
+        bg-background/70 font-alt backdrop-blur-sm transition-all duration-500 hover:border-foreground/70 
+        lg:bottom-auto lg:left-12 lg:top-6 lg:text-lg"
+        >
+          CV
+        </SheetTrigger>
+      )}
+
+      <SheetContent
+        side="left"
+        className="z-[99] min-w-full lg:w-[60%] lg:min-w-[920px] lg:max-w-[60%]"
       >
-        CV
-      </SheetTrigger>
-      <SheetContent side="left" className="z-[99] min-w-full lg:min-w-[75%]">
-        <SheetHeader>
-          <SheetTitle>CV</SheetTitle>
-          <SheetDescription>this is my cv</SheetDescription>
-        </SheetHeader>
-        <div className="mt-10">
-          What do u think?What do u think?What do u think?What do u think?What
-          do u think?What do u think?What do u think?What do u think?What do u
-          think?What do u think?What do u think?What do u think?What do u
-          think?What do u think?What do u think?What do u think?What do u
-          think?What do u think?What do u think?What do u think?What do u
-          think?What do u think?What do u think?What do u think?What do u
-          think?What do u think?What do u think?What do u think?What do u
-          think?What do u think?What do u think?
+        <div className="flex flex-col items-center ">
+          <SheetHeader className="mb-14">
+            <SheetTitle className="text-center font-alt text-xl tracking-wider sm:container lg:text-2xl">
+              Curriculum Vitae
+            </SheetTitle>
+            <SheetDescription className="text-center">
+              Sinta-se a vontade para analisar ou baixar a versão atualizada do
+              meu currículo
+            </SheetDescription>
+          </SheetHeader>
+          <div className="-translate-y-12">
+            <PdfViewer />
+          </div>
         </div>
+
+        <Link
+          href="/cv/kellington_crivelaro_desenvolvedor_fullstack.pdf"
+          className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 px-5 opacity-90 hover:opacity-100 lg:bottom-6"
+        >
+          <Download className="size-5" />
+          Download CV
+        </Link>
       </SheetContent>
     </Sheet>
   )

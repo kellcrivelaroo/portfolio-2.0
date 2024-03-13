@@ -1,6 +1,6 @@
 import { Github, Instagram, Linkedin } from 'lucide-react'
 import Image from 'next/image'
-import flame from 'public/flame-logo.svg'
+import flame from 'public/assets/flame-logo.svg'
 import { PropsWithChildren, ReactNode } from 'react'
 
 import { AnimatedTooltip } from './animated-tooltip'

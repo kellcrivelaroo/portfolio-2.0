@@ -73,7 +73,7 @@ const ContactForm = () => {
       borderRadius="1rem"
     >
       <form
-        className="mx-4 my-6 flex w-[540px] max-w-[75vw] flex-col gap-3 lg:mx-14 lg:my-8 lg:mb-10 lg:gap-5"
+        className="mx-4 my-6 flex w-[540px] max-w-[75vw] flex-col gap-2 lg:mx-14 lg:my-8 lg:mb-10 lg:gap-5"
         ref={animate}
         onSubmit={handleSubmit(onSubmit)}
       >
@@ -83,28 +83,28 @@ const ContactForm = () => {
 
         <Input type="text" {...register('subject')} placeholder="Assunto" />
         {errors.subject && (
-          <span className="-mb-2 -mt-4 pl-3 text-sm font-medium text-cyan-500">
+          <span className="-mt-2 pl-3 text-sm font-medium text-cyan-500 lg:-mb-2 lg:-mt-4">
             {errors.subject.message}
           </span>
         )}
 
         <Input type="text" {...register('name')} placeholder="Nome" />
         {errors.name && (
-          <span className="-mb-2 -mt-4 pl-3 text-sm font-medium text-cyan-500">
+          <span className="-mt-2 pl-3 text-sm font-medium text-cyan-500 lg:-mb-2 lg:-mt-4">
             {errors.name.message}
           </span>
         )}
 
         <Input type="text" {...register('email')} placeholder="E-mail" />
         {errors.email && (
-          <span className="-mb-2 -mt-4 pl-3 text-sm font-medium text-cyan-500">
+          <span className="-mt-2 pl-3 text-sm font-medium text-cyan-500 lg:-mb-2 lg:-mt-4">
             {errors.email.message}
           </span>
         )}
 
         <TextArea {...register('message')} placeholder="Mensagem" />
         {errors.message && (
-          <span className="-mb-2 -mt-4 pl-3 text-sm font-medium text-cyan-500">
+          <span className="-mt-2 pl-3 text-sm font-medium text-cyan-500 lg:-mb-2 lg:-mt-4">
             {errors.message.message}
           </span>
         )}

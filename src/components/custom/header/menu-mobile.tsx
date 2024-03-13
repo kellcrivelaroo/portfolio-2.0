@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 
 import Social from '../social'
 import Underline from '../underline'
+import CvSheet from './cv-drawer'
 import NavLinks from './nav-links'
 
 const MenuMobile = () => {
@@ -24,7 +25,9 @@ const MenuMobile = () => {
             <Underline />
           </div>
           <div className="flex flex-col items-center justify-center gap-6 pt-6">
-            <Button>Curriculum Vitae</Button>
+            <CvSheet>
+              <Button>Curriculum Vitae</Button>
+            </CvSheet>
             <Social />
           </div>
         </SheetContent>

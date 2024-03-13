@@ -3,7 +3,7 @@ import ProjectsCarousel from '../custom/projects/projects-carousel'
 
 const Projects = () => {
   return (
-    <div
+    <section
       id="projects"
       className=" bg-gradient-to-b from-background to-slate-900 pt-20"
     >
@@ -11,7 +11,7 @@ const Projects = () => {
         <Heading>Projetos</Heading>
         <ProjectsCarousel />
       </div>
-    </div>
+    </section>
   )
 }
 

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import avatar from 'public/kell.png'
+import avatar from 'public/assets/kell.png'
 
 import Heading from '../custom/heading'
 
@@ -7,7 +7,7 @@ const resizeConstant = 2.2
 
 const About = () => {
   return (
-    <div
+    <section
       id="about"
       className="relative flex w-full items-center justify-center pt-28 bg-dot-black/[0.25] dark:bg-dot-white/[0.15]
       lg:pt-0"
@@ -52,7 +52,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

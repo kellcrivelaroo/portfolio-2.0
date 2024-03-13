@@ -13,8 +13,8 @@ export const AnimatedTooltip = ({
 }: {
   items: {
     id: number
-    title: string
-    subtitle?: string
+    title: string | JSX.Element
+    subtitle?: string | JSX.Element
     element: JSX.Element
   }[]
 }) => {
@@ -41,7 +41,7 @@ export const AnimatedTooltip = ({
       {items.map((item, idx) => (
         <div
           className="group relative"
-          key={item.title}
+          key={item.id}
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
@@ -65,23 +65,26 @@ export const AnimatedTooltip = ({
                   rotate: rotate,
                   whiteSpace: 'nowrap',
                 }}
-                className="absolute -left-6 -top-16 z-50 hidden flex-col items-center justify-center 
-                rounded-md border border-foreground/10 bg-background px-4 py-2 text-xs shadow-xl lg:flex"
               >
                 <div
-                  className="absolute inset-x-[20%] -bottom-px z-30 h-px w-[20%] bg-gradient-to-r from-transparent 
+                  className="absolute -top-14 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center 
+                justify-center rounded-md border border-foreground/10 bg-background px-4 py-2 text-xs shadow-xl"
+                >
+                  <div
+                    className="absolute inset-x-[20%] -bottom-px z-30 h-px w-[20%] bg-gradient-to-r from-transparent 
                 via-emerald-500 to-transparent "
-                />
-                <div
-                  className="absolute -bottom-px left-[10%] z-30 h-px w-[60%] bg-gradient-to-r from-transparent 
+                  />
+                  <div
+                    className="absolute -bottom-px left-[10%] z-30 h-px w-[60%] bg-gradient-to-r from-transparent 
                 via-sky-500 to-transparent "
-                />
-                <div className="relative z-30 text-base font-bold ">
-                  {item.title}
+                  />
+                  <div className="relative z-30 text-base font-bold ">
+                    {item.title}
+                  </div>
+                  {!!item.subtitle && (
+                    <div className="text-xs">{item.subtitle}</div>
+                  )}
                 </div>
-                {!!item.subtitle && (
-                  <div className="text-xs ">{item.subtitle}</div>
-                )}
               </motion.div>
             )}
           </AnimatePresence>
