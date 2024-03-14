@@ -83,37 +83,38 @@ const ContactForm = () => {
 
         <Input type="text" {...register('subject')} placeholder="Assunto" />
         {errors.subject && (
-          <span className="-mt-2 pl-3 text-sm font-medium text-cyan-500 lg:-mb-2 lg:-mt-4">
+          <span className="-mt-2 pl-3 text-sm font-medium text-cyan-600 dark:text-cyan-500 lg:-mb-2 lg:-mt-4">
             {errors.subject.message}
           </span>
         )}
 
         <Input type="text" {...register('name')} placeholder="Nome" />
         {errors.name && (
-          <span className="-mt-2 pl-3 text-sm font-medium text-cyan-500 lg:-mb-2 lg:-mt-4">
+          <span className="-mt-2 pl-3 text-sm font-medium text-cyan-600 dark:text-cyan-500 lg:-mb-2 lg:-mt-4">
             {errors.name.message}
           </span>
         )}
 
         <Input type="text" {...register('email')} placeholder="E-mail" />
         {errors.email && (
-          <span className="-mt-2 pl-3 text-sm font-medium text-cyan-500 lg:-mb-2 lg:-mt-4">
+          <span className="-mt-2 pl-3 text-sm font-medium text-cyan-600 dark:text-cyan-500 lg:-mb-2 lg:-mt-4">
             {errors.email.message}
           </span>
         )}
 
         <TextArea {...register('message')} placeholder="Mensagem" />
         {errors.message && (
-          <span className="-mt-2 pl-3 text-sm font-medium text-cyan-500 lg:-mb-2 lg:-mt-4">
+          <span className="-mt-2 pl-3 text-sm font-medium text-cyan-600 dark:text-cyan-500 lg:-mb-2 lg:-mt-4">
             {errors.message.message}
           </span>
         )}
 
         <div className="ml-auto flex w-fit pr-1">
           <button
-            className="group relative flex w-fit items-center justify-center gap-3 rounded-full border border-slate-800 
-            bg-slate-950/80 px-8 py-1 font-alt text-lg font-normal tracking-wider text-slate-200 transition-all duration-500 hover:border-slate-700/50 
-            hover:text-foreground hover:brightness-[1.35] disabled:opacity-50 lg:px-14 "
+            className="d group relative flex w-fit items-center justify-center gap-3 rounded-full border bg-background px-10 
+            py-1 font-alt text-lg font-medium  tracking-wider transition-all duration-500 hover:border-slate-700/50 hover:text-foreground  
+            hover:brightness-110 disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950/80 
+            dark:font-normal dark:text-slate-200 hover:dark:border-slate-700/50 hover:dark:brightness-[1.35] "
             type="submit"
             disabled={sending}
           >
@@ -125,7 +126,7 @@ const ContactForm = () => {
           </button>
         </div>
 
-        <div className="my-3 h-[1px] w-full bg-gradient-to-r from-transparent via-slate-300 to-transparent dark:via-cyan-700 lg:mb-2 lg:mt-5" />
+        <div className="my-3 h-[1px] w-full bg-gradient-to-r from-transparent via-border to-transparent dark:via-cyan-700 lg:mb-2 lg:mt-5" />
 
         <ContactSocial />
       </form>

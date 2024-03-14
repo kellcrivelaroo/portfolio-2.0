@@ -63,7 +63,7 @@ export const social = [
           src={flame}
           alt="Logo Flame Tecnologia"
           width={28}
-          className="brightness-0 grayscale invert transition-all duration-500 hover:brightness-100 hover:grayscale-0 hover:invert-0"
+          className="brightness-50 grayscale transition-all duration-500 hover:brightness-100 hover:grayscale-0 hover:invert-0 dark:brightness-0 dark:invert"
         />
       </Link>
     ),

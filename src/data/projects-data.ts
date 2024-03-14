@@ -1,13 +1,15 @@
 import { StaticImageData } from 'next/image'
-import calculadoraCalorias from 'public/personal-projects/calculadora.png'
-import capputeeno from 'public/personal-projects/capputeeno.png'
-import coinsynch1 from 'public/personal-projects/coinsynch_1.png'
-import coinsynch2 from 'public/personal-projects/coinsynch_2.png'
-import gerenciadorFinancas from 'public/personal-projects/gerenciador_financas.png'
-import poll1 from 'public/personal-projects/polls_1.png'
-import poll2 from 'public/personal-projects/polls_2.png'
-import portfolio1 from 'public/personal-projects/portfolio_1.png'
-import portfolio2 from 'public/personal-projects/portfolio_2.png'
+import calculadoraCalorias from 'public/projects/calculadora.png'
+import capputeeno from 'public/projects/capputeeno.png'
+import coinsynch1 from 'public/projects/coinsynch_1.png'
+import coinsynch2 from 'public/projects/coinsynch_2.png'
+import edusynch1 from 'public/projects/edusynch_1.png'
+import edusynch2 from 'public/projects/edusynch_2.png'
+import gerenciadorFinancas from 'public/projects/gerenciador_financas.png'
+import poll1 from 'public/projects/polls_1.png'
+import poll2 from 'public/projects/polls_2.png'
+import portfolio1 from 'public/projects/portfolio_1.png'
+import portfolio2 from 'public/projects/portfolio_2.png'
 
 export interface Project {
   id: number
@@ -18,12 +20,25 @@ export interface Project {
   }
   content: string[]
   liveUrl: string
-  githubUrl: string
+  githubUrl?: string
 }
 
 export const projectsData: Project[] = [
   {
     id: 1,
+    title: 'EduSynch',
+    images: {
+      image1: edusynch1,
+      image2: edusynch2,
+    },
+    content: [
+      'Em minha última posição como desenvolvedor FrontEnd, tive o privilégio de integrar a equipe da EduSynch, uma empresa americana líder no setor de educação.',
+      'Entre minhas contribuição à empresa, posso destacar o aprimoramento contínuo do site institucional, a implementação de novos módulos e funcionalidade no CMS (Sistema de Gestão de Conteúdos) e liderança no MVP de uma solução inovadora da empresa.',
+    ],
+    liveUrl: 'https://edusynch.com',
+  },
+  {
+    id: 2,
     title: 'Polls - Criador de enquetes',
     images: {
       image1: poll1,
@@ -32,13 +47,13 @@ export const projectsData: Project[] = [
     content: [
       'Polls é um projeto FullStack que oferece uma plataforma para criar e compartilhar enquetes.',
       'O BackEnd, foi desenvolvido utilizando as tecnologias Node.js, Fastify e Prisma, com Redis e WebHooks.',
-      'Já no FrontEnd, foi utilizado Next.js 14 e TypeScript, juntamente com shadcn/ui para uma interface de usuário moderna responsiva e intuitiva.',
+      'Já no FrontEnd, foi utilizado Next.js 14 e TypeScript, juntamente com Shadcn/UI para uma interface de usuário moderna responsiva e intuitiva.',
     ],
     liveUrl: 'https://polls-web.vercel.app',
     githubUrl: 'https://github.com/kellcrivelaroo/polls-web',
   },
   {
-    id: 2,
+    id: 3,
     title: 'CoinSynch',
     images: {
       image1: coinsynch1,
@@ -53,7 +68,7 @@ export const projectsData: Project[] = [
     githubUrl: 'https://github.com/kellcrivelaroo/coinsynch',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Portfólio 1.0',
     images: {
       image1: portfolio1,
@@ -68,7 +83,7 @@ export const projectsData: Project[] = [
     githubUrl: 'https://github.com/kellcrivelaroo/portfolio',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Gerenciador de Finanças',
     images: {
       image1: gerenciadorFinancas,
@@ -81,7 +96,7 @@ export const projectsData: Project[] = [
     githubUrl: 'https://github.com/kellcrivelaroo/gerenciador-financas',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Capputeeno',
     images: {
       image1: capputeeno,
@@ -95,7 +110,7 @@ export const projectsData: Project[] = [
       'https://github.com/kellcrivelaroo/capputeeno-frontend-challenge',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Calculadora de Calorias',
     images: {
       image1: calculadoraCalorias,

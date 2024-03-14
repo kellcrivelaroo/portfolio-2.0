@@ -23,8 +23,8 @@ const CvSheet = ({ children }: CvSheetProps) => {
         <SheetTrigger asChild>{children}</SheetTrigger>
       ) : (
         <SheetTrigger
-          className="glow fixed bottom-7 left-4 z-[91] size-12 items-center justify-center rounded-full border border-slate-800 
-        bg-background/70 font-alt backdrop-blur-sm transition-all duration-500 hover:border-foreground/70 
+          className="glow fixed bottom-7 left-3 z-[91] size-12 items-center justify-center rounded-full border bg-background font-alt
+        font-medium opacity-80 backdrop-blur-sm transition-all duration-500 hover:border-foreground/70 hover:opacity-100
         lg:bottom-auto lg:left-12 lg:top-6 lg:text-lg"
         >
           CV

@@ -4,6 +4,7 @@ import javascript from 'public/stack/javascript.svg'
 import next from 'public/stack/next-js.svg'
 import node from 'public/stack/node-js.svg'
 import react from 'public/stack/react.svg'
+import typescript from 'public/stack/typescript.svg'
 
 import { AnimatedTooltip } from '../custom/animated-tooltip'
 import MailButton from '../custom/mail-button'
@@ -33,64 +34,77 @@ const stack = [
       <Image
         src={javascript}
         alt="JavaScript logo"
-        width={28}
-        height={28}
-        className="size-6 lg:size-7"
+        width={32}
+        height={32}
+        className="size-7 rounded-md lg:size-8"
       />
     ),
   },
   {
     id: 2,
-    title: 'React.js',
+    title: 'TypeScript',
     element: (
       <Image
-        src={react}
-        alt="React.js logo"
-        width={28}
-        height={28}
-        className="size-6 lg:size-7"
+        src={typescript}
+        alt="TypeScript logo"
+        width={34}
+        height={34}
+        className="size-7 rounded-md lg:size-[34px]"
       />
     ),
   },
   {
     id: 3,
+    title: 'React.js',
+    element: (
+      <Image
+        src={react}
+        alt="React.js logo"
+        width={32}
+        height={32}
+        className="size-7 lg:size-8"
+      />
+    ),
+  },
+  {
+    id: 4,
     title: 'Next.js',
     element: (
       <div className="rounded-md dark:bg-slate-200 dark:p-px">
         <Image
           src={next}
           alt="Next.js logo"
-          width={28}
-          height={28}
-          className="size-6 lg:size-7"
+          width={32}
+          height={32}
+          className="size-7 lg:size-8"
         />
       </div>
     ),
   },
   {
-    id: 4,
+    id: 5,
     title: 'Node.js',
     element: (
       <Image
         src={node}
         alt="Node.js logo"
-        width={28}
-        height={28}
-        className="size-6 lg:size-7"
+        width={32}
+        height={32}
+        className="size-7 lg:size-8"
       />
     ),
   },
   {
-    id: 5,
+    id: 6,
     title: 'Astro',
     element: (
       <div className="rounded-md dark:bg-slate-200 dark:p-px">
         <Image
           src={astro}
           alt="Astro logo"
-          width={28}
-          height={28}
-          className="size-6 lg:size-7"
+          width={32}
+          height={32}
+          className="size-7 lg:size-8"
         />
       </div>
     ),
@@ -129,7 +143,7 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className="mb-6 max-w-[90%] text-center text-xl lg:mb-10 lg:max-w-[60%] lg:text-2xl ">
+        <p className="mb-6 max-w-[90%] text-center text-xl lg:mb-10 lg:max-w-[62%] lg:text-2xl ">
           Apaixonado por Pixel Perfect, soluções modernas e por criar
           experiências interativas.
           <br />
@@ -145,7 +159,7 @@ const Hero = () => {
           desenvolvimento web.
         </p>
 
-        <div className="mb-8 flex items-end gap-5 lg:mb-14">
+        <div className="mb-8 flex items-end gap-6 lg:mb-14">
           <span className="leading-none underline underline-offset-4 lg:text-lg">
             Stack:
           </span>

@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          'relative w-screen overflow-x-hidden font-sans antialiased',
+          'relative w-screen overflow-x-hidden font-sans font-medium antialiased dark:font-normal',
           fontSans.variable,
           fontAlt.variable,
         )}

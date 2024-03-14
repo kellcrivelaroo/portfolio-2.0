@@ -204,8 +204,9 @@ const CarouselPrevious = React.forwardRef<
     <button
       ref={ref}
       className={cn(
-        `absolute flex size-12 items-center justify-center rounded-full border border-slate-800 bg-slate-900/[0.8] text-slate-300
-        shadow-lg shadow-white/5 transition-all hover:text-slate-100 hover:brightness-110 lg:size-14`,
+        `absolute flex size-12 items-center justify-center rounded-full border bg-background/80 shadow-lg shadow-white/5 transition-all
+        duration-300 hover:border-foreground/50 dark:border-slate-800 dark:bg-slate-900/[0.8] dark:text-slate-300 
+        hover:dark:text-slate-100 hover:dark:brightness-110 lg:size-14`,
         orientation === 'horizontal'
           ? 'left-40 top-1/2 -translate-y-1/2'
           : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
@@ -232,8 +233,9 @@ const CarouselNext = React.forwardRef<
     <button
       ref={ref}
       className={cn(
-        `absolute flex size-12 items-center justify-center rounded-full border border-slate-800 bg-slate-900/[0.8] text-slate-300
-        shadow-lg shadow-white/5 transition-all hover:text-slate-100 hover:brightness-110 lg:size-14`,
+        `absolute flex size-12 items-center justify-center rounded-full border bg-background/80 shadow-lg shadow-white/5 transition-all
+        duration-300 hover:border-foreground/50 dark:border-slate-800 dark:bg-slate-900/[0.8] dark:text-slate-300 
+        hover:dark:text-slate-100 hover:dark:brightness-110 lg:size-14`,
         orientation === 'horizontal'
           ? 'right-40 top-1/2 -translate-y-1/2'
           : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',

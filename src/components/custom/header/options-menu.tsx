@@ -39,9 +39,9 @@ const OptionsMenu = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
-        className="glow fixed bottom-7 right-4 z-[90] flex size-12 items-center justify-center rounded-full border border-slate-800 
-        bg-background/70 font-alt backdrop-blur-sm transition-all duration-500 hover:border-foreground/70 
-        lg:bottom-auto lg:left-[calc(100vw-100px)] lg:right-auto lg:top-6 "
+        className="glow fixed bottom-7 right-4 z-[90] flex size-12 items-center justify-center rounded-full border
+        bg-background font-alt opacity-80 backdrop-blur-sm transition-all duration-500 hover:border-foreground/70 hover:opacity-100 
+        lg:bottom-auto lg:left-[calc(100vw-108px)] lg:right-auto lg:top-6 "
       >
         <MoreHorizontal className="size-5 lg:size-6" />
       </DropdownMenuTrigger>
@@ -50,7 +50,7 @@ const OptionsMenu = () => {
         align="end"
         alignOffset={-4}
         sideOffset={8}
-        className="rounded-lg border-foreground/20"
+        className="rounded-lg border"
       >
         {theme && (
           <DropdownMenuItem

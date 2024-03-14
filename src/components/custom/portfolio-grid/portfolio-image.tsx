@@ -25,7 +25,7 @@ const PortfolioImage = ({ card, selectedId }: PortfolioImageProps) => {
       )}
       quality={90}
       fill
-      alt="thumbnail"
+      alt={card.alt}
     />
   )
 }

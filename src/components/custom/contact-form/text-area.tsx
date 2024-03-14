@@ -39,11 +39,10 @@ const TextArea = React.forwardRef<HTMLTextAreaElement, TextAreaProps>(
       >
         <textarea
           className={cn(
-            `shadow-textArea flex w-full resize-none rounded-md border-none bg-slate-950/85 px-3 py-2
-            text-base transition-all duration-300 file:bg-transparent file:text-sm
-            file:font-medium placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-1
-            focus-visible:ring-cyan-500/60 disabled:cursor-not-allowed disabled:opacity-50
-            group-hover/textArea:shadow-none dark:shadow-[0px_0px_1px_1px_var(--slate-800)]
+            `dark:shadow-textArea flex w-full rounded-md border-none bg-background/85 px-3 py-2 text-base shadow shadow-foreground/10
+            backdrop-blur-sm transition-all duration-300 file:bg-transparent file:text-sm file:font-medium
+            placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-sky-500/60 disabled:cursor-not-allowed
+            disabled:opacity-50 dark:bg-slate-950/85 dark:shadow-[0px_0px_1px_1px_var(--slate-800)] group-hover/textArea:dark:shadow-none
            `,
             className,
           )}

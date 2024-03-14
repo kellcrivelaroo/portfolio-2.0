@@ -40,11 +40,10 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           type={type}
           className={cn(
-            `flex h-10 w-full rounded-md border-none bg-slate-950/85 px-3 py-2 text-base shadow-input
-            backdrop-blur-sm transition-all duration-300 file:bg-transparent file:text-sm file:font-medium
-            placeholder:text-slate-400 focus-visible:outline-none focus-visible:ring-1
-            focus-visible:ring-sky-500/60 disabled:cursor-not-allowed disabled:opacity-50 group-hover/input:shadow-none
-            dark:shadow-[0px_0px_1px_1px_var(--slate-800)]
+            `flex h-10 w-full rounded-md border-none bg-background/85 px-3 py-2 text-base shadow shadow-foreground/10 backdrop-blur-sm
+            transition-all duration-300 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-400
+            focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-sky-500/60 disabled:cursor-not-allowed disabled:opacity-50
+            dark:bg-slate-950/85 dark:shadow-[0px_0px_1px_1px_var(--slate-800)] dark:shadow-input group-hover/input:dark:shadow-none
            `,
             className,
           )}

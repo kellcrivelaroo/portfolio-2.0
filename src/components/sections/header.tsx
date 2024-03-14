@@ -10,8 +10,8 @@ const Header = () => {
     <>
       <header className="fixed top-0 z-[90] mx-auto flex w-screen items-center px-4 pt-3 lg:grid lg:pl-12 lg:pr-16">
         <div
-          className="mx-auto flex w-full items-center justify-between rounded-full border border-slate-800 bg-background/50 px-6 py-2.5 shadow-md
-      backdrop-blur-md lg:grid lg:w-[1200px] lg:max-w-[80%] lg:grid-cols-[200px_1fr_200px] lg:px-10"
+          className="mx-auto flex w-full items-center justify-between rounded-full border bg-background/50 px-6 py-2.5 shadow-md backdrop-blur-md
+      dark:border-slate-800 lg:grid lg:w-[1200px] lg:max-w-[80%] lg:grid-cols-[200px_1fr_200px] lg:px-10"
         >
           <Logo />
 

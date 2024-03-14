@@ -20,6 +20,7 @@ export type Card = {
   name: string
   className: string
   thumbnail: StaticImageData
+  alt: string
   url: string
 }
 
@@ -30,6 +31,7 @@ export const portfolioCards: Card[] = [
     name: 'Flame',
     className: 'md:col-span-5 md:row-span-6',
     thumbnail: flame,
+    alt: 'Flame Tecnologia',
     url: 'https://flametecnologia.com.br',
   },
   // 2
@@ -38,6 +40,7 @@ export const portfolioCards: Card[] = [
     name: 'Thinsol',
     className: 'md:col-span-6 md:row-span-7',
     thumbnail: thinsol,
+    alt: 'Thinsol - Soluções Químicas',
     url: 'https://www.thinsol.com.br',
   },
   // 3
@@ -46,6 +49,7 @@ export const portfolioCards: Card[] = [
     name: 'Beyond',
     className: 'md:col-span-4 md:row-span-6',
     thumbnail: beyond,
+    alt: 'Beyond Assessoria',
     url: 'https://bndassessoria.com.br',
   },
   //4
@@ -54,6 +58,7 @@ export const portfolioCards: Card[] = [
     name: 'Lazuli',
     className: 'md:col-span-5 md:row-span-6',
     thumbnail: lazuli,
+    alt: 'UseLazuli - Moda Feminina',
     url: 'https://uselazulishop.com.br',
   },
   //5
@@ -62,6 +67,7 @@ export const portfolioCards: Card[] = [
     name: 'Nord Sorvetes',
     className: 'md:col-span-5 md:row-span-3',
     thumbnail: nord,
+    alt: 'Nord Sorvetes',
     url: 'https://nordsorvetes.com.br',
   },
   //6
@@ -70,6 +76,7 @@ export const portfolioCards: Card[] = [
     name: 'Dedica Odonto',
     className: 'md:col-span-5 md:row-span-3',
     thumbnail: dedica,
+    alt: 'Dedica Odonto',
     url: 'https://dedicaodonto.com.br',
   },
   //7
@@ -78,6 +85,7 @@ export const portfolioCards: Card[] = [
     name: 'AudiClear',
     className: 'md:col-span-5 md:row-span-4',
     thumbnail: audioclear,
+    alt: 'AudioClear - Aparelhos auditivos',
     url: 'https://audioclear.com.br',
   },
   //8
@@ -86,6 +94,7 @@ export const portfolioCards: Card[] = [
     name: 'SpumPalah',
     className: 'md:col-span-7 md:row-span-5',
     thumbnail: spumpalah,
+    alt: 'SpumPalah - Soluções domóticas',
     url: 'https://spumpalah.com.br',
   },
   //9
@@ -94,6 +103,7 @@ export const portfolioCards: Card[] = [
     name: 'Tendtudo Piscinas',
     className: 'md:col-span-7 md:row-span-4',
     thumbnail: tendtudo,
+    alt: 'Tendtudo Piscinas',
     url: 'https://tendtudopiscinasbauru.com.br',
   },
   //10
@@ -102,6 +112,7 @@ export const portfolioCards: Card[] = [
     name: 'Dabus Abiati',
     className: 'md:col-span-6 md:row-span-4',
     thumbnail: dabusabiati,
+    alt: 'Dabus Abiati - Odontologia',
     url: 'https://dabusabiati.com.br',
   },
   //11
@@ -110,6 +121,7 @@ export const portfolioCards: Card[] = [
     name: 'K7 Engenharia',
     className: 'md:col-span-5 md:row-span-5',
     thumbnail: k7engenharia,
+    alt: 'K7 Engenharia',
     url: 'https://k7engenharia.com',
   },
   //12
@@ -118,6 +130,7 @@ export const portfolioCards: Card[] = [
     name: 'Têxtil Piratininga',
     className: 'md:col-span-7 md:row-span-5',
     thumbnail: textil,
+    alt: 'Têxtil Piratininga',
     url: 'https://textilpiratininga.com.br',
   },
   //13
@@ -126,6 +139,7 @@ export const portfolioCards: Card[] = [
     name: 'Spazio Colchões',
     className: 'md:col-span-7 md:row-span-4',
     thumbnail: spazio,
+    alt: 'Spazio Colchões',
     url: 'https://spaziocolchoes.com.br',
   },
   //14
@@ -134,6 +148,7 @@ export const portfolioCards: Card[] = [
     name: 'Cáritas Bauru',
     className: 'md:col-span-6 md:row-span-4',
     thumbnail: caritas,
+    alt: 'Cáritas Bauru',
     url: 'https://caritasbauru.org.br/',
   },
 ]

@@ -6,6 +6,7 @@ import {
   useTransform,
   useVelocity,
 } from 'framer-motion'
+import { useTheme } from 'next-themes'
 import React, { useEffect, useRef, useState } from 'react'
 
 import { cn } from '@/lib/utils'
@@ -23,13 +24,19 @@ export const TracingBeam = ({
     offset: ['start start', 'end start'],
   })
 
+  const { theme } = useTheme()
+
   const contentRef = useRef<HTMLDivElement>(null)
   const [svgHeight, setSvgHeight] = useState(0)
+  const [fillColor, setFillColor] = useState('#9091A0')
 
   useEffect(() => {
     if (contentRef.current) {
       setSvgHeight(contentRef.current.offsetHeight)
     }
+
+    if (typeof window !== 'undefined')
+      setFillColor(theme === 'dark' ? '#9091A0' : '#000000')
   }, [])
 
   const y1 = useSpring(
@@ -55,7 +62,7 @@ export const TracingBeam = ({
         className,
       )}
     >
-      <div className="pointer-events-none absolute -left-4 top-24 z-10 lg:left-[33px] lg:top-28">
+      <div className="pointer-events-none absolute -left-3.5 top-24 z-10 lg:left-9 lg:top-28">
         <motion.div
           transition={{
             duration: 0.2,
@@ -93,7 +100,7 @@ export const TracingBeam = ({
           <motion.path
             d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
             fill="none"
-            stroke="#9091A0"
+            stroke={fillColor}
             strokeOpacity="0.16"
             transition={{
               duration: 10,
@@ -126,9 +133,7 @@ export const TracingBeam = ({
           </defs>
         </svg>
       </div>
-      <div ref={contentRef} className="">
-        {children}
-      </div>
+      <div ref={contentRef}>{children}</div>
     </motion.div>
   )
 }
