@@ -2,8 +2,11 @@
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
 import 'react-pdf/dist/esm/Page/TextLayer.css'
 
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
+
+import Underline from '../underline'
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.js',
@@ -19,6 +22,7 @@ const pdfURL = './cv/kellington_crivelaro_desenvolvedor_fullstack.pdf'
 
 const PdfViewer = () => {
   const [width, setWidth] = useState(0)
+  const [page, setPage] = useState(1)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -31,8 +35,32 @@ const PdfViewer = () => {
   }, [])
 
   return (
-    <Document file={pdfURL} options={options}>
-      <Page pageNumber={1} width={width} />
+    <Document file={pdfURL} options={options} className="relative">
+      <Page pageNumber={page} width={width} />
+      <div
+        className="absolute bottom-1 left-1/2 z-50 w-fit -translate-x-1/2 items-center justify-center 
+        overflow-hidden rounded-full border border-foreground/30 bg-slate-900/95 font-semibold
+        dark:brightness-110 lg:bottom-2"
+      >
+        <div className="relative flex ">
+          <button
+            className="px-3 py-1 transition-all hover:bg-slate-900/50 hover:brightness-105 disabled:text-slate-400 lg:px-4"
+            onClick={() => setPage(1)}
+            disabled={page === 1}
+          >
+            <ArrowLeft className="size-4 lg:size-5" />
+          </button>
+          <button
+            className="px-3 py-1 transition-all hover:bg-slate-900/80 hover:brightness-105 disabled:text-slate-400 lg:px-4"
+            onClick={() => setPage(2)}
+            disabled={page === 2}
+          >
+            <ArrowRight className="size-4 lg:size-5" />
+          </button>
+
+          <Underline className="translate-y-px" />
+        </div>
+      </div>
     </Document>
   )
 }

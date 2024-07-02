@@ -159,11 +159,13 @@ const Hero = () => {
           desenvolvimento web.
         </p>
 
-        <div className="mb-8 flex items-end gap-6 lg:mb-14">
+        <div className="mb-8 flex flex-col items-center gap-4 lg:mb-14 lg:flex-row lg:items-end lg:gap-6">
           <span className="leading-none underline underline-offset-4 lg:text-lg">
             Stack:
           </span>
-          <AnimatedTooltip items={stack} />
+          <div className="flex flex-row items-end gap-4 lg:gap-6">
+            <AnimatedTooltip items={stack} />
+          </div>
         </div>
 
         <div className="relative flex w-fit flex-col items-center justify-center">
