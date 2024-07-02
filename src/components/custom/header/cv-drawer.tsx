@@ -51,7 +51,7 @@ const CvSheet = ({ children }: CvSheetProps) => {
         </div>
 
         <Link
-          href="/cv/kellington_crivelaro_desenvolvedor_fullstack.pdf"
+          href="/cv/kellington_crivelaro_desenvolvedor_fullstack_.pdf"
           className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 px-5 opacity-90 hover:opacity-100 lg:bottom-6"
         >
           <Download className="size-5" />

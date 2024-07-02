@@ -18,7 +18,7 @@ const options = {
   standardFontDataUrl: '/standard_fonts/',
 }
 
-const pdfURL = './cv/kellington_crivelaro_desenvolvedor_fullstack.pdf'
+const pdfURL = './cv/kellington_crivelaro_desenvolvedor_fullstack_.pdf'
 
 const PdfViewer = () => {
   const [width, setWidth] = useState(0)
