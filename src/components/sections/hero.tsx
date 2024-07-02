@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import astro from 'public/stack/astro.svg'
+import docker from 'public/stack/docker.svg'
 import javascript from 'public/stack/javascript.svg'
 import next from 'public/stack/next-js.svg'
 import node from 'public/stack/node-js.svg'
@@ -83,6 +84,21 @@ const stack = [
   },
   {
     id: 5,
+    title: 'Astro',
+    element: (
+      <div className="rounded-md dark:bg-slate-200 dark:p-px">
+        <Image
+          src={astro}
+          alt="Astro logo"
+          width={32}
+          height={32}
+          className="size-7 lg:size-8"
+        />
+      </div>
+    ),
+  },
+  {
+    id: 6,
     title: 'Node.js',
     element: (
       <Image
@@ -95,18 +111,16 @@ const stack = [
     ),
   },
   {
-    id: 6,
-    title: 'Astro',
+    id: 7,
+    title: 'Docker',
     element: (
-      <div className="rounded-md dark:bg-slate-200 dark:p-px">
-        <Image
-          src={astro}
-          alt="Astro logo"
-          width={32}
-          height={32}
-          className="size-7 lg:size-8"
-        />
-      </div>
+      <Image
+        src={docker}
+        alt="Docker logo"
+        width={32}
+        height={32}
+        className="size-7 lg:size-8"
+      />
     ),
   },
 ]

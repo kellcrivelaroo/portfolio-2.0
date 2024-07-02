@@ -39,19 +39,19 @@ const PdfViewer = () => {
       <Page pageNumber={page} width={width} />
       <div
         className="absolute bottom-1 left-1/2 z-50 w-fit -translate-x-1/2 items-center justify-center 
-        overflow-hidden rounded-full border border-foreground/30 bg-slate-900/95 font-semibold
+        overflow-hidden rounded-full border border-foreground/30 font-semibold dark:bg-slate-900/95
         dark:brightness-110 lg:bottom-2"
       >
         <div className="relative flex ">
           <button
-            className="px-3 py-1 transition-all hover:bg-slate-900/50 hover:brightness-105 disabled:text-slate-400 lg:px-4"
+            className="px-3 py-1 transition-all hover:brightness-105 disabled:text-slate-400 dark:text-slate-100  hover:dark:bg-slate-900/50 lg:px-4"
             onClick={() => setPage(1)}
             disabled={page === 1}
           >
             <ArrowLeft className="size-4 lg:size-5" />
           </button>
           <button
-            className="px-3 py-1 transition-all hover:bg-slate-900/80 hover:brightness-105 disabled:text-slate-400 lg:px-4"
+            className="px-3 py-1 transition-all hover:brightness-105 disabled:text-slate-400 dark:text-slate-100 hover:dark:bg-slate-900/80 lg:px-4"
             onClick={() => setPage(2)}
             disabled={page === 2}
           >
