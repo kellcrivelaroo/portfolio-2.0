@@ -44,7 +44,7 @@ const ProjectsCarousel = () => {
         {projectsData.map((project, index) => (
           <CarouselItem
             key={project.id}
-            className="container pl-11 pr-7 lg:px-9"
+            className="container select-none pl-11 pr-7 lg:px-9"
           >
             <ProjectCard project={project} index={index} current={current} />
           </CarouselItem>

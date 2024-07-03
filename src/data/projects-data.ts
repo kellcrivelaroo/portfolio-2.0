@@ -10,6 +10,8 @@ import poll1 from 'public/projects/polls_1.png'
 import poll2 from 'public/projects/polls_2.png'
 import portfolio1 from 'public/projects/portfolio_1.png'
 import portfolio2 from 'public/projects/portfolio_2.png'
+import softgestor1 from 'public/projects/softgestor_1.png'
+import softgestor2 from 'public/projects/softgestor_2.png'
 
 export interface Project {
   id: number
@@ -26,19 +28,33 @@ export interface Project {
 export const projectsData: Project[] = [
   {
     id: 1,
+    title: 'SoftGestor',
+    images: {
+      image1: softgestor1,
+      image2: softgestor2,
+    },
+    content: [
+      'Participei no desenvolvimento do SoftGestor, um Sistema de Gestão (ERP) voltado para pequenos e médios negócios.',
+      'Utilizei da minha experiência multidisciplinar para colaborar de maneira respeitosa com os gestores, contribuindo ativamente na definição de regras de negócios e na otimização do funcionamento do sistema.',
+      'Principais tecnologias: React.js, Tanstack Query e Material-UI',
+    ],
+    liveUrl: 'https://softgestor.com.br',
+  },
+  {
+    id: 2,
     title: 'EduSynch',
     images: {
       image1: edusynch1,
       image2: edusynch2,
     },
     content: [
-      'Em minha última posição como desenvolvedor FrontEnd, tive o privilégio de integrar a equipe da EduSynch, uma empresa americana líder no setor de educação.',
+      'Atuando como desenvolvedor Front-End, tive o privilégio de integrar a equipe da EduSynch, uma empresa americana líder no setor de educação.',
       'Entre minhas contribuição à empresa, posso destacar o aprimoramento contínuo do site institucional, a implementação de novos módulos e funcionalidade no CMS (Sistema de Gestão de Conteúdos) e liderança no MVP de uma solução inovadora da empresa.',
     ],
     liveUrl: 'https://edusynch.com',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Polls - Criador de enquetes',
     images: {
       image1: poll1,
@@ -47,20 +63,20 @@ export const projectsData: Project[] = [
     content: [
       'Polls é um projeto FullStack que oferece uma plataforma para criar e compartilhar enquetes.',
       'O BackEnd, foi desenvolvido utilizando as tecnologias Node.js, Fastify e Prisma, com Redis e WebHooks.',
-      'Já no FrontEnd, foi utilizado Next.js 14 e TypeScript, juntamente com Shadcn/UI para uma interface de usuário moderna responsiva e intuitiva.',
+      'Já no Front-End, foi utilizado Next.js 14 e TypeScript, juntamente com Shadcn/UI para uma interface de usuário moderna responsiva e intuitiva.',
     ],
     liveUrl: 'https://polls-web.vercel.app',
     githubUrl: 'https://github.com/kellcrivelaroo/polls-web',
   },
   {
-    id: 3,
+    id: 4,
     title: 'CoinSynch',
     images: {
       image1: coinsynch1,
       image2: coinsynch2,
     },
     content: [
-      'CoinSynch é um projeto fictício desenvolvido como um desafio técnico para uma vaga de programador FrontEnd.',
+      'CoinSynch é um projeto fictício desenvolvido como um desafio técnico para uma vaga de programador Front-End.',
       'Ele consiste em uma Landing Page que fornece informações sobre criptomoedas e um painel administrativo para gerenciamento de sua carteira de criptomoedas e transações.',
       'Entre as tecnologias utilizadas, destacam-se: Next.js 13, Tailwind CSS, Axios, Chart.js e Zod.',
     ],
@@ -68,7 +84,7 @@ export const projectsData: Project[] = [
     githubUrl: 'https://github.com/kellcrivelaroo/coinsynch',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Portfólio 1.0',
     images: {
       image1: portfolio1,
@@ -83,7 +99,7 @@ export const projectsData: Project[] = [
     githubUrl: 'https://github.com/kellcrivelaroo/portfolio',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Gerenciador de Finanças',
     images: {
       image1: gerenciadorFinancas,
@@ -96,13 +112,13 @@ export const projectsData: Project[] = [
     githubUrl: 'https://github.com/kellcrivelaroo/gerenciador-financas',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Capputeeno',
     images: {
       image1: capputeeno,
     },
     content: [
-      'Capputeeno é a minha solução para um desafio técnico aberto (FrontEnd Challenge)',
+      'Capputeeno é a minha solução para um desafio técnico aberto (Front-End Challenge)',
       'Trata-se de uma loja virtual fictícia que incorpora uma ampla gama de funcionalidades encontradas em e-commerces da atualidade.',
     ],
     liveUrl: 'https://capputeeno-frontend-challenge.vercel.app/',
@@ -110,7 +126,7 @@ export const projectsData: Project[] = [
       'https://github.com/kellcrivelaroo/capputeeno-frontend-challenge',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Calculadora de Calorias',
     images: {
       image1: calculadoraCalorias,

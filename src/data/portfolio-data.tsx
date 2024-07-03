@@ -1,19 +1,20 @@
 import { StaticImageData } from 'next/image'
 import audioclear from 'public/portfolio/audioclear.png'
 import beyond from 'public/portfolio/beyond.png'
-import caritas from 'public/portfolio/caritas.png'
+import controlSolution from 'public/portfolio/control-solution.png'
 import dabusabiati from 'public/portfolio/dabusabiati.png'
 import dedica from 'public/portfolio/dedica.png'
 import flame from 'public/portfolio/flame.png'
 import k7engenharia from 'public/portfolio/k7engenharia.png'
 import lazuli from 'public/portfolio/lazuli.png'
-import magistral from 'public/portfolio/magistral.png'
 import nord from 'public/portfolio/nord.png'
 import spazio from 'public/portfolio/spazio.png'
 import spumpalah from 'public/portfolio/spumpalah.png'
 import tendtudo from 'public/portfolio/tendtudo.png'
 import textil from 'public/portfolio/textil.png'
 import thinsol from 'public/portfolio/thinsol.png'
+// import caritas from 'public/portfolio/caritas.png'
+// import magistral from 'public/portfolio/magistral.png'
 
 export type Card = {
   id: number
@@ -28,11 +29,11 @@ export const portfolioCards: Card[] = [
   // 1
   {
     id: 1,
-    name: 'Flame',
+    name: 'Control Solution',
     className: 'md:col-span-5 md:row-span-6',
-    thumbnail: flame,
-    alt: 'Flame Tecnologia',
-    url: 'https://flametecnologia.com.br',
+    thumbnail: controlSolution,
+    alt: 'Control Solution',
+    url: 'https://controlsolution.com.br',
   },
   // 2
   {
@@ -145,10 +146,10 @@ export const portfolioCards: Card[] = [
   //14
   {
     id: 14,
-    name: 'Cáritas Bauru',
+    name: 'Flame',
     className: 'md:col-span-6 md:row-span-4',
-    thumbnail: caritas,
-    alt: 'Cáritas Bauru',
-    url: 'https://caritasbauru.org.br/',
+    thumbnail: flame,
+    alt: 'Flame Tecnologia',
+    url: 'https://flametecnologia.com.br',
   },
 ]
